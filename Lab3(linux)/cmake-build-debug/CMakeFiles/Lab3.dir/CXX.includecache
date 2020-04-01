@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pokemon/Рабочий стол/Linux_labs/Lab3/main.cpp
+iostream
+-
+unistd.h
+-
+fcntl.h
+-
+semaphore.h
+-
+cstring
+-
+

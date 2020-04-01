@@ -1,0 +1,3 @@
+/home/pokemon/Рабочий стол/Linux_labs/Lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pokemon/Рабочий стол/Linux_labs/Lab3/cmake-build-debug/CMakeFiles/Lab3.dir
+/home/pokemon/Рабочий стол/Linux_labs/Lab3/cmake-build-debug/CMakeFiles/edit_cache.dir

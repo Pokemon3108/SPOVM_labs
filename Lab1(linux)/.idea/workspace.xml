@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8113daa5-2743-4429-b39e-022957f68902" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ProjectId" id="1YJCkJZRQ3VDu5HkdFCLgCBjdWK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8113daa5-2743-4429-b39e-022957f68902" name="Default Changelist" comment="" />
+      <created>1582651451543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582651451543</updated>
+      <workItem from="1582651452694" duration="43000" />
+      <workItem from="1582651571104" duration="67000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1582651631409">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state x="765" y="296" width="424" height="513" key="FileChooserDialogImpl/55.27.1865.1053@55.27.1865.1053" timestamp="1582651631409" />
+    <state x="643" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582651594814">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state x="643" y="380" key="com.intellij.ide.util.TipDialog/55.27.1865.1053@55.27.1865.1053" timestamp="1582651594814" />
+  </component>
+</project>
