@@ -81,7 +81,7 @@ HANDLE createProcess() {
 		NULL,
 		NULL,
 		FALSE,
-		NULL,
+		CREATE_NEW_CONSOLE,
 		NULL,
 		NULL,
 		&info,
