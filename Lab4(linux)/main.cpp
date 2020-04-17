@@ -3,6 +3,7 @@
 #include <list>
 #include <pthread.h>
 #include <vector>
+#include <string.h>
 
 using namespace std;
 void* printThreadInformation(void* arg);
@@ -62,7 +63,11 @@ void* printThreadInformation(void* arg){
     while (true) {
         if (number!=threadNumbers[currentThread]) continue;
         pthread_mutex_lock(&mutex);
-        cout << "Thread: " << to_string(number) << endl;
+        string str="Thread: "+to_string(number);
+        for (int i=0; i<str.length(); ++i){
+            printf("%c", str[i]);
+        }
+        printf("\n");
         ++currentThread;
         if (currentThread==threadNumbers.size()) currentThread=0;
         sleep(1);
