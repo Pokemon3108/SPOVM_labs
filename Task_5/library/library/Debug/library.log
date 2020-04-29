@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  library.cpp
+d:\учеба\лабораторные сповм\task_5\library\library\library.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+     Создается библиотека D:\Учеба\Лабораторные СПОВМ\Task_5\library\Debug\library.lib и объект D:\Учеба\Лабораторные СПОВМ\Task_5\library\Debug\library.exp
+  library.vcxproj -> D:\Учеба\Лабораторные СПОВМ\Task_5\library\Debug\library.dll
