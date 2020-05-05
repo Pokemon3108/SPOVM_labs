@@ -79,19 +79,21 @@ DWORD WINAPI printProcessInformation(LPVOID number)
 	while (true) {
 		if (closeID == GetCurrentThreadId()) return 0;
 
-
 		WaitForSingleObject(eventCurrentThread,INFINITE);
 		EnterCriticalSection(&criticalSection);
 		for (int i = 0; i < info.length(); ++i)
+		{
 			cout << info[i];
+			Sleep(100);
+		}
 		cout << "\n";
 		if (counter != events.size()-1) ++counter;
 		else counter = 0;
+		Sleep(1000);
 		LeaveCriticalSection(&criticalSection);	
 
-		
 		SetEvent(events[counter]);
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	
 	return 0;
