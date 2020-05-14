@@ -6,13 +6,14 @@
 
 using namespace std;
 void* myMalloc(int size);
-void myFree(void* ptr);
+void myFree(void** ptr);
 void* mallocSwap(int size);
-void freeSwap(void* ptr);
+void freeSwap(void** ptr);
 DWORD getGranularity();
 
 DWORD offset = 0;
 HANDLE hFile = INVALID_HANDLE_VALUE;
+HLOCAL memoryHandle;
 
 int main() {
 
@@ -26,19 +27,24 @@ int main() {
 	gets_s(str, 20);
 	puts(str);
 
-	myFree(str);
+	myFree((void**)&str);
 	if (str != nullptr) cout << "Free failed" << endl;
 
+	cout << "Input 1st element of array" << endl;
 	int* arr1 = (int*)mallocSwap(20 * sizeof(int));
 	cin >> arr1[0];
-	cout << arr1[0];
+	cout << arr1[0] << endl;
 
-
+	rewind(stdin);
 	char*str2 = (char*)mallocSwap(10);
+	cout << "Input string" << endl;
 	gets_s(str2, 10);
+	puts(str2);
 
-	freeSwap(str2);
-	freeSwap(arr1);
+	freeSwap((void**)&str2);
+	if (str2 != nullptr) cout << "Error free" << endl;
+	freeSwap((void**)&arr1);
+	if (arr1 != nullptr) cout << "Error free" << endl;
 
 	CloseHandle(hFile);
 
@@ -48,7 +54,7 @@ int main() {
 void * myMalloc(int size)
 {
 	void* ptr;
-	HLOCAL memoryHandle;
+	
 	memoryHandle = LocalAlloc(LMEM_MOVEABLE, size + sizeof(HLOCAL));
 	if (!memoryHandle)  return nullptr;
 
@@ -58,13 +64,13 @@ void * myMalloc(int size)
 
 }
 
-void myFree(void * ptr)
+void myFree(void ** ptr)
 {
-	HLOCAL memoryHandle;
+	
 	memoryHandle = (char*)ptr - sizeof(HLOCAL);
 
 	LocalUnlock(memoryHandle);
-	if (LocalFree(memoryHandle)) ptr = nullptr;
+	if (LocalFree(memoryHandle)) *ptr = nullptr;
 
 }
 
@@ -81,9 +87,9 @@ void* mallocSwap(int size)
 	return ptr;
 }
 
-void freeSwap(void * ptr)
+void freeSwap(void ** ptr)
 {
-	UnmapViewOfFile(ptr);
+	if (UnmapViewOfFile(*ptr)) *ptr = nullptr;
 }
 
 DWORD getGranularity()
